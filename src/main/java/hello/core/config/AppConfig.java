@@ -19,12 +19,11 @@ public class AppConfig {
         return new OrderServiceImpl(createMemberRepository(), createDisCountPolicy());
     }
 
-    public DiscountPolicy createDisCountPolicy() {
+    private DiscountPolicy createDisCountPolicy() {
         return new RateDiscountPolicy();
     }
 
-    public MemberRepository createMemberRepository() {
+    private MemberRepository createMemberRepository() {
         return new MemoryMemberRepository();
     }
-
 }
